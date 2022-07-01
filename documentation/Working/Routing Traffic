@@ -1,0 +1,17 @@
+# Selectively Routing Traffic to a Network Slice
+
+| Item | Description | Support Qualifier |
+|----|----|----|
+|Summary| Camera Management Application that manages multiple distributed edge computers which process camera feeds. The Edge Computer is located in customer premises. The Edge computer is connected to the cloud or MEC via a 5G network. Management system configures the edge computers in real time. The Management System determines where data is from edge computers is routed. | M |
+|Roles, Actor(s) and scope|User wishes to have Edge Computer interact with cloud in the most optimal manner (lowest latency for management traffic and lowest cost for data traffic)| M |
+|NF Requirements|| O |
+|Pre-conditions|Management System already has IP address and Port Number for Data Service; Management System already has knowledge of QoS options| M |
+|Begins when|User installs Edge Computer on premises| M |
+|Step 1|Edge Computer Connects to Management Service| M |
+|Step 2|Management Service Acquires IP Address & Port Number for Edge | M |
+|Step 3|Management Service uses QoS on Demand API to configure Service Levels for each flow (Management flow to Management Service & Data flow to Data Service) | M |
+|Step 4|Management Traffic is routed with QoS level 1 | M |
+|Step 5|Data Traffic is routed with QoS level 2 | M |
+|Ends when|Edge Computer is Powered Down| M |
+|Post-conditions|| M |
+|Exceptions|Quality of Service is not Possible for specific flow| M | 
